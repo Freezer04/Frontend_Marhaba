@@ -1,7 +1,7 @@
 import axios from 'axios';
 const APP_URL = " http://localhost:8000/api/auth";
 
-export function login(email, password) {
+export  function login(email, password) {
   return axios.post(`${APP_URL}/login`, {
     email: email,
     password: password,
@@ -12,7 +12,8 @@ export function login(email, password) {
 const register = async (
   username,
   email,
-  gender,
+  fullname,
+  phone,
   role,
   password,
   repeated_password
@@ -21,9 +22,10 @@ const register = async (
     username,
     email,
     password,
+    phone,
     repeated_password,
     role,
-    gender,
+    fullname,
   });
 };
 
