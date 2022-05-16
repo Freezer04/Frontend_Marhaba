@@ -1,5 +1,5 @@
 import React from 'react';
-import Aboutimg from '../assest/imgs/about-1.jpg'
+// import Aboutimg from '../assest/imgs/about-1.jpg';
 
 const About = () => {
   return (
@@ -19,11 +19,12 @@ const About = () => {
             <div class="col-md-6">
                 <div class="row">
                     <div class="col">
-                        <img  src={{ Aboutimg }} class="w-100 rounded shadow"/>
+                        <img  src={require("../assest/imgs/time1.jpg")} class="w-100 rounded shadow"/>
                     </div>
                     <div class="col">
-                        <img src="assets/imgs/about-2.jpg" class="w-100 rounded shadow"/>
-                    </div>
+                    <img  src={require("../assest/imgs/time.jpg")} class="w-100 rounded shadow"/>
+                </div>
+                   
                 </div>                  
             </div>
         </div>
@@ -37,10 +38,10 @@ const About = () => {
             <div class="col-md-6 order-1 order-sm-first">
                 <div class="row">
                     <div class="col">
-                        <img alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page" src="assets/imgs/about-3.jpg" class="w-100 rounded shadow"/>
+                        <img  src={require("../assest/imgs/about-3.jpg")} class="w-100 rounded shadow"/>
                     </div>
                     <div class="col">
-                        <img alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page" src="assets/imgs/about-4.jpg" class="w-100 rounded shadow"/>
+                        <img src={require("../assest/imgs/about-4.jpg")} class="w-100 rounded shadow"/>
                     </div>
                 </div>                  
             </div>

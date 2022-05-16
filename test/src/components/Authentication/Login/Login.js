@@ -1,8 +1,14 @@
 import '../../../assets/css/style.css'
 import React, {useState} from 'react';
+import jwtDecode from 'jwt-decode';
+import { useDispatch } from 'react-redux';
 import {login} from "../../../Service/Auth/Authentication"
+import { loginAction, setRoleAction, setIdAction } from '../../../Action/authActions';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate
+  const dispatch = useDispatch();
 
   const [ data, setData] = useState({
     email: "",
@@ -21,9 +27,14 @@ const Login = () => {
 
   const handleSubmit =()=> {
     login( data.email, data.password).then((response) => {
-        window.location = '/'
+      (async () => {
+        await dispatch(loginAction());
+        await dispatch(setRoleAction(jwtDecode(response.data.accessToken).role.name));
+        await dispatch(setIdAction(jwtDecode(response.data.accessToken).id));
+        // window.location = '/Dashboard'  
+        // Window.location("/Dashboard")
       })()
-    ;
+    });
     setSubmitted(true);
   };
 
@@ -59,7 +70,7 @@ const Login = () => {
                         <label for="checkbox-fill-a1" className="cr"> Save Details</label>
                     </div>
                 </div>
-                <button className="btn btn-primary shadow-2 mb-4">Login</button>
+                <button className="btn btn-primary shadow-2 mb-4" type='submit'>Login</button>
                 <p className="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p>
                 <p className="mb-0 text-muted">Don’t have an account? <a href="register">Signup</a></p>
             </div>
