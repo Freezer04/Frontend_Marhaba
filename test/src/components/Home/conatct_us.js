@@ -7,7 +7,7 @@ const ConatctUs = () => {
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 d-none d-md-block">
-                <img src="assets/imgs/contact.jpg"  class="w-100 rounded shadow"/>
+                <img src={require("../assest/imgs/order.jpg")}  class="w-100 rounded shadow"/>
             </div>
             <div class="col-md-6">
                 <form>
@@ -23,7 +23,7 @@ const ConatctUs = () => {
                     <div class="form-group">
                         <input type="number" class="form-control" name="seats" placeholder="Seats"/>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Book A Table</button>
+                    <button type="submit" class="btn btn-primary btn-block">Order Now</button>
                     <small class="form-text text-muted mt-3">We don't span customers. Check our <a href="#">Privacy Policy</a></small>
                 </form>
             </div>
