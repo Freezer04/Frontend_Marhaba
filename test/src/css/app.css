@@ -11335,7 +11335,7 @@ hr {
 .header {
   position: relative;
   min-height: 650px;
-  background: url(../imgs/header.jpg) no-repeat center center fixed;
+  background: url(../assest/imgs/header.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -11455,19 +11455,19 @@ section.py-lg {
 }
 
 section.pattern-style-1 {
-  background-image: url(../imgs/style-1.png);
+  background-image: url(../assest/imgs/style-1.png);
 }
 
 section.pattern-style-2 {
-  background-image: url(../imgs/style-2.png);
+  background-image: url(../assest/imgs/style-2.png);
 }
 
 section.pattern-style-3 {
-  background-image: url(../imgs/style-3.png);
+  background-image: url(../assest/imgs/style-3.png);
 }
 
 section.pattern-style-4 {
-  background-image: url(../imgs/style-4.png);
+  background-image: url(../assest/imgs/style-4.png);
 }
 
 section.has-overlay {
@@ -11493,7 +11493,7 @@ section.has-overlay:after {
 
 section.has-img-bg {
   position: relative;
-  background: url(../imgs/section.jpg) no-repeat center top fixed;
+  background: url(../assest/imgs/section.jpg) no-repeat center top fixed;
   background-size: cover;
   color: #fff;
 }
